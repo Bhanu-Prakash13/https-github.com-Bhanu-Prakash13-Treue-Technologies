@@ -1,62 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Poppins:wght@500&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery with Lightbox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="gallery-heading">My Image Gallery</h1>
+  <div class="gallery">
 
-body {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(45deg, #0a0a0a, #012e2c);
-}
+    <div class="thumbnail" onclick="openLightbox(0)">
+      <img src="Images/img1.jpg" alt="Image 1">
+      <div class="description"> Image 1</div>
+    </div>
+    <div class="thumbnail" onclick="openLightbox(1)">
+      <img src="Images/img2.jpeg" alt="Image 2">
+      <div class="description"> Image 2</div>
+    </div>
+    <div class="thumbnail" onclick="openLightbox(2)">
+        <img src="Images/img3.jpg" alt="Image 2">
+        <div class="description"> Image 3</div>
+      </div>
+      <div class="thumbnail" onclick="openLightbox(3)">
+        <img src="Images/img4.jpg" alt="Image 2">
+        <div class="description">Image 4</div>
+      </div>
+      <div class="thumbnail" onclick="openLightbox(4)">
+        <img src="Images/img5.jpg" alt="Image 2">
+        <div class="description"> Image 5</div>
+      </div>
+      <div class="thumbnail" onclick="openLightbox(5)">
+        <img src="Images/img6.jpg" alt="Image 2">
+        <div class="description"> Image 6</div>
+      </div>
+      <div class="thumbnail" onclick="openLightbox(5)">
+        <img src="Images/img7.jpg" alt="Image 2">
+        <div class="description"> Image 7</div>
+      </div>
+      <div class="thumbnail" onclick="openLightbox(5)">
+        <img src="Images/img8.jpg" alt="Image 2">
+        <div class="description"> Image 8</div>
+      </div>
+      <div class="thumbnail" onclick="openLightbox(5)">
+        <img src="Images/img9.jpg" alt="Image 2">
+        <div class="description"> Image 9</div>
+      </div>
+      <div class="thumbnail" onclick="openLightbox(5)">
+        <img src="Images/img10.jpg" alt="Image 2">
+        <div class="description"> Image 10</div>
+      </div>
+    
+  </div>
 
-.calculator {
-    border: 1px solid #717377;
-    padding: 20px;
-    border-radius: 16px;
-    background: transparent;
-    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
-}
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <span class="close-btn" onclick="closeLightbox()">&times;</span>
+      <img id="lightbox-image" src="" alt="Image">
+      <div id="lightbox-text"></div>
+    </div>
+  </div>
 
-input {
-    width: 320px;
-    border: none;
-    padding: 24px;
-    margin: 10px;
-    background: transparent;
-    box-shadow: 0px 3px 15px rgba(84, 84, 84, .1);
-    font-size: 40px;
-    text-align: right;
-    cursor: pointer;
-    color: #ffffff;
-}
-
-input::placeholder {
-    color: #ffffff;
-}
-
-button {
-    border: none;
-    width: 60px;
-    height: 60px;
-    margin: 10px;
-    border-radius: 50%;
-    background: transparent;
-    color: #ffffff;
-    font-size: 20px;
-    box-shadow: -8px -8px 15px rgba(255, 255, 255, .1);
-    cursor: pointer;
-}
-
-.equalBtn {
-    background: orange;
-}
-
-.operator {
-    color: #32a838;
-}
+  <script src="script.js"></script>
+</body>
+</html>
